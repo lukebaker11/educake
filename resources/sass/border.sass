@@ -1,0 +1,25 @@
+.is-padded
+    padding: calc(0.5em - 1px) 0.75em calc(0.5em - 1px) 0.75em
+.has-border
+    border-style: solid
+    border-width: 1px
+    &.is-padded
+        padding: calc(0.5em - 1px) 0.75em calc(0.5em - 1px) 0.75em
+    @each $name, $pair in $colors
+        $color: nth($pair, 1)
+        &.is-#{$name}
+            border-color: $color
+            &.is-padded
+                padding: calc(0.5em - 1px) 0.75em calc(0.5em - 1px) 0.75em
+            &.with-small-radius
+                border-radius: $radius-small
+                &.is-padded
+                    padding: calc(0.5em - 1px) 0.75em calc(0.5em - 1px) 0.75em
+            &.with-radius
+                border-radius: $radius
+                &.is-padded
+                    padding: calc(0.5em - 1px) 0.75em calc(0.5em - 1px) 0.75em
+            &.with-large-radius
+                border-radius: $radius-large
+                &.is-padded
+                    padding: calc(0.5em - 1px) 0.75em calc(0.5em - 1px) 0.75em

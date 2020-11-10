@@ -1,0 +1,10 @@
+.navbar-link:focus + .navbar-dropdown,
+.navbar-link:active + .navbar-dropdown,
+.navbar-link:hover + .navbar-dropdown {
+    display: block;
+}
+
+.field.has-addons .control:first-child:not(:only-child).has-border {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
